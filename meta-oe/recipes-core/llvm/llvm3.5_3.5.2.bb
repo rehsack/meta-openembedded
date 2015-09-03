@@ -1,14 +1,17 @@
 require llvm.inc
 
+# 3-clause BSD-like
+# University of Illinois/NCSA Open Source License
+LICENSE = "NCSA"
+LIC_FILES_CHKSUM = "file://LICENSE.TXT;md5=47e311aa9caedd1b3abf098bd7814d1d"
+
 DEPENDS += "zlib"
 EXTRA_OECONF += "--enable-zlib"
 
-SRC_URI += "file://Remove-error-output-from-configure-if-CFLAGS-is-set-.patch"
-
 SRC_URI_append_libc-uclibc = " file://arm_fenv_uclibc.patch "
 
-SRC_URI[md5sum] = "40564e1dc390f9844f1711c08b08e391"
-SRC_URI[sha256sum] = "68766b1e70d05a25e2f502e997a3cb3937187a3296595cf6e0977d5cd6727578"
+SRC_URI[md5sum] = "f5a4dc595f7e8bd23397684d0906d014"
+SRC_URI[sha256sum] = "44196156d5749eb4b4224fe471a29cc3984df92570a4a89fa859f7394fc0c575"
 
 PACKAGECONFIG ??= ""
 PACKAGECONFIG[r600] = "--enable-experimental-targets=R600,,,"
