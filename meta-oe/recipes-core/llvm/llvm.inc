@@ -37,6 +37,7 @@ EXTRA_OECONF += "--disable-assertions \
                  --enable-debug-runtime \
                  --disable-expensive-checks \
                  --enable-bindings=none \
+                 --enable-jit \
                  --enable-keep-symbols \
                  --enable-libffi \
                  --enable-optimized \
