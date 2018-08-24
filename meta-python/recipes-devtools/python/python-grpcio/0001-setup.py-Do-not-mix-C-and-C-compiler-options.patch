@@ -22,11 +22,11 @@ Index: grpcio-1.8.4/setup.py
 ===================================================================
 --- grpcio-1.8.4.orig/setup.py
 +++ grpcio-1.8.4/setup.py
-@@ -115,7 +115,7 @@ if EXTRA_ENV_COMPILE_ARGS is None:
+@@ -135,7 +135,7 @@ if EXTRA_ENV_COMPILE_ARGS is None:
      else:
        EXTRA_ENV_COMPILE_ARGS += ' -D_ftime=_ftime64 -D_timeb=__timeb64'
    elif "linux" in sys.platform:
--    EXTRA_ENV_COMPILE_ARGS += ' -std=c++11 -std=gnu99 -fvisibility=hidden -fno-wrapv -fno-exceptions'
+-    EXTRA_ENV_COMPILE_ARGS += ' -std=gnu99 -fvisibility=hidden -fno-wrapv -fno-exceptions'
 +    EXTRA_ENV_COMPILE_ARGS += ' -fvisibility=hidden -fno-wrapv -fno-exceptions'
    elif "darwin" in sys.platform:
      EXTRA_ENV_COMPILE_ARGS += ' -fvisibility=hidden -fno-wrapv -fno-exceptions'
